@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <title>CultLog | Щоденник Гіка</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Підключення шрифтів: Poppins для тексту, Playfair Display для заголовків -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!-- ШАПКА -->
+    <header class="header">
+      <div class="header-left">
+        <h1 class="logo">CultLog.</h1>
+      </div>
+      <div class="header-center">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link">Стрічка</a></li>
+            <li><a href="#" class="nav-link">Кіно & Серіали</a></li>
+            <li><a href="#" class="nav-link">Ігри</a></li>
+            <li><a href="#" class="nav-link">Книги</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="header-buttons">
+          <a href="#" class="btn-outline">Увійти</a>
+          <a href="#" class="btn-solid">Мій профіль</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ГОЛОВНИЙ БАНЕР -->
+    <section class="banner">
+      <div class="banner-content">
+        <h1 class="banner-title">Мистецтво потребує оцінки.</h1>
+        <p class="banner-description">Твій особистий архів кіно, ігор та книг. Зберігай, критикуй, надихайся.</p>
+        <a href="#" class="btn-solid btn-large">Почати щоденник</a>
+      </div>
+    </section>
+
+    <main>
+      <!-- "ДОФАМІНОВА СТРІЧКА" (Стиль TikTok/Reels) -->
+      <section class="feed-section">
+        <h2 class="section-title">Гарячі думки</h2>
+        <p class="section-subtitle">Швидкі огляди від спільноти</p>
+        
+        <!-- Контейнер з горизонтальним скролом -->
+        <div class="feed-scroll">
+          
+          <!-- Картка огляду 1 -->
+          <div class="feed-card" style="background-image: url('/pic/Interstellar.jpg');">
+            <div class="feed-card-overlay">
+              <span class="rating">9.5/10</span>
+              <h3 class="feed-title">Інтерстеллар</h3>
+              <p class="feed-text">"Цей фінал просто зламав мені мозок. Нолан - геній!"</p>
+              <span class="author">@kino_critic</span>
+            </div>
+          </div>
+
+          <!-- Картка огляду 2 -->
+          <div class="feed-card" style="background-image: url('/pic/Cyberpunk2077.475937df-e65f-4850-b2f0-471c2966f074');">
+            <div class="feed-card-overlay">
+              <span class="rating">10/10</span>
+              <h3 class="feed-title">Cyberpunk 2077</h3>
+              <p class="feed-text">"Після патчів це найкраща гра десятиліття. Атмосфера неймовірна."</p>
+              <span class="author">@gamer_dude</span>
+            </div>
+          </div>
+
+          <!-- Картка огляду 3 -->
+          <div class="feed-card" style="background-image: url('/pic/Дюна2.jpg');">
+            <div class="feed-card-overlay">
+              <span class="rating">8.0/10</span>
+              <h3 class="feed-title">Дюна. Частина 2</h3>
+              <p class="feed-text">"Епічно, але книга все одно краща. Візуал на висоті."</p>
+              <span class="author">@bookworm</span>
+            </div>
+          </div>
+
+          <!-- Картка огляду 4 -->
+          <div class="feed-card" style="background-image: url('/pic/Code-geass_cover.jpg');">
+            <div class="feed-card-overlay">
+              <span class="rating">11/10</span>
+              <h3 class="feed-title">Атака Титанів</h3>
+              <p class="feed-text">"Я плакав. Це не просто аніме, це мистецтво."</p>
+              <span class="author">@anime_fan</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- РОЗДІЛИ (КАТЕГОРІЇ) -->
+      <section class="categories-section">
+        <div class="sct-line-box">
+          <div class="sct-line"></div>
+          <h2 class="section-title">Що досліджуємо сьогодні?</h2>
+          <div class="sct-line"></div>
+        </div>
+
+        <div class="category-grid">
+          <div class="cat-card">
+            <img src="/pic/OldCamera.png" alt="Фільми">
+            <h3>Фільми & Серіали</h3>
+          </div>
+          <div class="cat-card">
+            <img src="img/cat-games.jpg" alt="Ігри">
+            <h3>Відеоігри</h3>
+          </div>
+          <div class="cat-card">
+            <img src="img/cat-books.jpg" alt="Книги">
+            <h3>Книги & Комікси</h3>
+          </div>
+          <div class="cat-card">
+            <img src="img/cat-board.jpg" alt="Настілки">
+            <h3>Настільні ігри</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 CultLog. Твій Гік-Щоденник.</p>
+    </footer>
+  </div>
+</body>
+</html>

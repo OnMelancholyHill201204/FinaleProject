@@ -1,0 +1,283 @@
+/* Базові налаштування (Темна тема) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a; /* Дуже темний, майже чорний */
+  color: #EFEFF5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шрифти для заголовків (Високий критик) */
+h1, h2, h3, .logo {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid #222;
+  position: sticky; /* Шапка завжди зверху */
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  color: #d4af37; /* Колір старого золота для преміальності */
+  font-style: italic;
+  font-weight: 700;
+}
+
+.header-left, .header-right {
+  flex: 1;
+  display: flex;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.header-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list, .header-buttons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: #d4af37;
+}
+
+/* ================= КНОПКИ ================= */
+.btn-solid {
+  background-color: #d4af37;
+  color: #0a0a0a;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-solid:hover {
+  background-color: #f3c93f;
+}
+
+.btn-outline {
+  color: #EFEFF5;
+  border: 1px solid #555;
+  padding: 9px 19px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+.btn-large {
+  font-size: 16px;
+  padding: 15px 30px;
+}
+
+/* ================= БАНЕР ================= */
+.banner {
+  /* Тут ти поставиш свою картинку для фону баннера (в папку img) */
+  background-image: url('/pic/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 180px 0;
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.banner-description {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+/* ================= ДОФАМІНОВА СТРІЧКА ================= */
+.feed-section {
+  padding: 80px 40px;
+  background-color: #111;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.feed-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Дозволяє скролити по горизонталі */
+  padding-bottom: 20px;
+  /* Ховаємо скроллбар для краси */
+  scrollbar-width: none; 
+}
+.feed-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Вертикальні карточки як у ТікТок */
+.feed-card {
+  min-width: 260px;
+  height: 420px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.feed-card:hover {
+  transform: scale(1.02);
+}
+
+.feed-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.rating {
+  background-color: #d4af37;
+  color: #000;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.feed-title {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.feed-text {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.author {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ================= КАТЕГОРІЇ ================= */
+.categories-section {
+  padding: 80px 40px;
+}
+
+.sct-line-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.sct-line {
+  flex: 1;
+  height: 1px;
+  background-color: #333;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cat-card {
+  width: 250px;
+  text-align: center;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  filter: grayscale(40%); /* Робимо картинки трохи похмурими/кіношними */
+  transition: 0.3s;
+}
+
+.cat-card:hover img {
+  filter: grayscale(0%);
+  transform: translateY(-5px);
+}
+
+.cat-card h3 {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ================= ФУТЕР ================= */
+.footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid #222;
+  color: #555;
+  font-size: 14px;
+}
