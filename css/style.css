@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0a0a0a; /* Дуже темний, майже чорний */
+  background-color: #0a0a0a;
   color: #EFEFF5;
 }
 
@@ -15,7 +15,6 @@ a {
   text-decoration: none;
 }
 
-/* Шрифти для заголовків (Високий критик) */
 h1, h2, h3, .logo {
   font-family: 'Playfair Display', serif;
 }
@@ -28,14 +27,14 @@ h1, h2, h3, .logo {
   padding: 20px 40px;
   background-color: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid #222;
-  position: sticky; /* Шапка завжди зверху */
+  position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .logo {
   font-size: 28px;
-  color: #d4af37; /* Колір старого золота для преміальності */
+  color: #d4af37;
   font-style: italic;
   font-weight: 700;
 }
@@ -75,7 +74,7 @@ h1, h2, h3, .logo {
   color: #d4af37;
 }
 
-/* ================= КНОПКИ ================= */
+/* ================= КНОПКИ ТА ПРОФІЛЬ ================= */
 .btn-solid {
   background-color: #d4af37;
   color: #0a0a0a;
@@ -93,7 +92,7 @@ h1, h2, h3, .logo {
   color: #EFEFF5;
   border: 1px solid #555;
   padding: 9px 19px;
-  border-radius: 4px;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
@@ -107,10 +106,35 @@ h1, h2, h3, .logo {
   padding: 15px 30px;
 }
 
+/* Кнопка переходу на профіль з твоєю аватаркою */
+.user-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1a1a1a;
+  color: #d4af37;
+  padding: 5px 20px 5px 5px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 1px solid #333;
+}
+
+.user-profile-btn:hover {
+  background-color: #2a2a2a;
+  border-color: #d4af37;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* ================= БАНЕР ================= */
 .banner {
-  /* Тут ти поставиш свою картинку для фону баннера (в папку img) */
-  background-image: url('/pic/background.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('/pic/background.jpg');
   background-size: cover;
   background-position: center;
   padding: 180px 0;
@@ -153,16 +177,14 @@ h1, h2, h3, .logo {
 .feed-scroll {
   display: flex;
   gap: 20px;
-  overflow-x: auto; /* Дозволяє скролити по горизонталі */
+  overflow-x: auto;
   padding-bottom: 20px;
-  /* Ховаємо скроллбар для краси */
   scrollbar-width: none; 
 }
 .feed-scroll::-webkit-scrollbar {
   display: none;
 }
 
-/* Вертикальні карточки як у ТікТок */
 .feed-card {
   min-width: 260px;
   height: 420px;
@@ -214,12 +236,82 @@ h1, h2, h3, .logo {
   color: #ccc;
   margin-bottom: 15px;
   line-height: 1.4;
+  font-style: italic; /* Щоб відгуки виглядали як цитати */
 }
 
+/* --- Аватарки та Юзернейми у відгуках --- */
 .author {
-  font-size: 12px;
-  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #d4af37;
+  font-weight: 600;
+  transition: 0.2s;
+  margin-top: auto; /* Притискаємо до низу */
 }
+
+.author-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #d4af37; /* Золота рамочка для преміальності */
+}
+
+.author:hover span {
+  text-decoration: underline;
+  color: #f3c93f;
+}
+
+/* --- Кнопка "Завантажити ще" у стрічці --- */
+.load-more-card {
+  min-width: 150px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-more-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.load-more-btn .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  font-size: 24px;
+  color: #888;
+  transition: 0.3s;
+}
+
+.load-more-btn .load-text {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.load-more-btn:hover .arrow {
+  border-color: #d4af37;
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: translateX(5px); /* Стрілочка трохи їде вправо при наведенні */
+}
+.load-more-btn:hover .load-text {
+  color: #d4af37;
+}
+
 
 /* ================= КАТЕГОРІЇ ================= */
 .categories-section {
@@ -258,13 +350,14 @@ h1, h2, h3, .logo {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
-  filter: grayscale(40%); /* Робимо картинки трохи похмурими/кіношними */
+  filter: grayscale(40%);
   transition: 0.3s;
 }
 
 .cat-card:hover img {
   filter: grayscale(0%);
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
 }
 
 .cat-card h3 {
