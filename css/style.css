@@ -193,7 +193,7 @@ h1, h2, h3, .logo {
 
 /* ================= БАНЕР ================= */
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('/pic/background.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('../pic/background.jpg');
   background-size: cover;
   background-position: center;
   padding: 180px 0;
