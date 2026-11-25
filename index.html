@@ -6,7 +6,6 @@
   <title>CultLog | Щоденник Гіка</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Підключення шрифтів -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +13,6 @@
 <body>
   <div class="wrapper">
     
-    <!-- ШАПКА -->
     <header class="header">
       <div class="header-left">
         <h1 class="logo">CultLog.</h1>
@@ -22,192 +20,147 @@
       <div class="header-center">
         <nav>
           <ul class="nav-list">
-            <li><a href="#" class="nav-link">Стрічка</a></li>
-            <li><a href="#" class="nav-link">Кіно & Серіали</a></li>
-            <li><a href="#" class="nav-link">Ігри</a></li>
-            <li><a href="#" class="nav-link">Книги</a></li>
+            <li><a href="index.html#feed" class="nav-link">Стрічка</a></li>
+            <li><a href="#categories" class="nav-link">Каталог</a></li>
+            <li><a href="profile.html" class="nav-link">Мої списки</a></li>
           </ul>
         </nav>
       </div>
       <div class="header-right">
         <div class="header-buttons">
           <a href="#" class="btn-outline">Увійти</a>
-          <!-- Твоя нова аватарка: Кіт-інтелектуал (Високий критик) -->
           <a href="profile.html" class="user-profile-btn">
-            <img src="https://i.pinimg.com/736x/43/ee/b2/43eeb24f22e84d41dc2f37c35e808168.jpg" alt="Моя Аватарка" class="avatar">
+            <img src="https://api.dicebear.com/9.x/pixel-art/svg?seed=Egor" alt="Моя Аватарка" class="avatar">
             <span>Мій профіль</span>
           </a>
         </div>
       </div>
     </header>
 
-    <!-- ГОЛОВНИЙ БАНЕР -->
     <section class="banner">
       <div class="banner-content">
         <h1 class="banner-title">Мистецтво потребує оцінки.</h1>
-        <p class="banner-description">Твій особистий архів кіно, ігор та книг. Зберігай, критикуй, надихайся.</p>
+        <p class="banner-description">Твій особистий архів кіно, ігор, книг та музики. Зберігай, критикуй, надихайся.</p>
         <a href="#feed" class="btn-solid btn-large">Гортати думки</a>
       </div>
     </section>
 
     <main>
-      <!-- "ДОФАМІНОВА СТРІЧКА" -->
       <section id="feed" class="feed-section">
         <h2 class="section-title">Гарячі думки</h2>
         <p class="section-subtitle">Швидкі огляди від "експертів"</p>
         
-        <!-- Контейнер з горизонтальним скролом -->
-        <div class="feed-scroll">
+        <!-- ОБГОРТКА ДЛЯ СТРІЛОК ПРОКРУТКИ -->
+        <div class="feed-wrapper">
+          <!-- Кнопка Вліво -->
+          <button class="scroll-arrow left" onclick="document.getElementById('dopamine-scroll').scrollBy({ left: -350, behavior: 'smooth' });">&#8592;</button>
           
-          <!-- Картка 1 -->
-          <div class="feed-card" style="background-image: url('/pic/Interstellar.jpg');">
-            <div class="feed-card-overlay">
-              <span class="rating">9.5/10</span>
-              <h3 class="feed-title">Інтерстеллар</h3>
-              <p class="feed-text">"Цей фінал просто зламав мені мозок. Нолан - геній, ви просто не зрозуміли метафору!"</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Губка Боб джентльмен -->
-                <img src="https://i.pinimg.com/736x/f6/cb/bd/f6cbbd9ed4482ce0a6fcb60c41031b26.jpg" alt="ava" class="author-avatar">
-                <span>@kino_snob</span>
-              </a>
+          <div class="feed-scroll" id="dopamine-scroll">
+            
+            <div class="feed-card" style="background-image: url('/pic/Interstellar.jpg');">
+              <div class="feed-card-overlay">
+                <span class="rating">9.5/10</span>
+                <h3 class="feed-title">Інтерстеллар</h3>
+                <p class="feed-text">"Цей фінал просто зламав мені мозок. Нолан - геній!"</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/bottts/svg?seed=Snob" alt="ava" class="author-avatar">
+                  <span>@kino_snob</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Картка 2 -->
-          <div class="feed-card" style="background-image: url('/pic/Cyberpunk2077.475937df-e65f-4850-b2f0-471c2966f074');">
-            <div class="feed-card-overlay">
-              <span class="rating">10/10</span>
-              <h3 class="feed-title">Cyberpunk 2077</h3>
-              <p class="feed-text">"Після 20 патчів гра ідеальна. Ті, хто каже інакше — просто мають слабкий ПК."</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Товстий нерд за ПК (Мем з Південного Парку) -->
-                <img src="https://i.pinimg.com/736x/7b/09/a6/7b09a633a2164e228d44747764d25dc7.jpg" alt="ava" class="author-avatar">
-                <span>@tru_gamer3000</span>
-              </a>
+            <div class="feed-card" style="background-image: url('/pic/Cyberpunk2077.475937df-e65f-4850-b2f0-471c2966f074');">
+              <div class="feed-card-overlay">
+                <span class="rating">10/10</span>
+                <h3 class="feed-title">Cyberpunk 2077</h3>
+                <p class="feed-text">"Після 20 патчів гра ідеальна."</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/pixel-art/svg?seed=Gamer" alt="ava" class="author-avatar">
+                  <span>@tru_gamer3000</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Картка 3 -->
-          <div class="feed-card" style="background-image: url('/pic/Дюна2.jpg');">
-            <div class="feed-card-overlay">
-              <span class="rating">7.0/10</span>
-              <h3 class="feed-title">Дюна. Частина 2</h3>
-              <p class="feed-text">"Книга краща. Фремени в оригіналі були не такими. Ви читали 6 томів Герберта?"</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Нерд емодзі -->
-                <img src="https://i.pinimg.com/736x/91/97/7b/91977be4ba5ecf91a6ce7e1f1ec78b40.jpg" alt="ava" class="author-avatar">
-                <span>@book_worm_iq200</span>
-              </a>
+            <div class="feed-card" style="background-image: url('/pic/Дюна2.jpg');">
+              <div class="feed-card-overlay">
+                <span class="rating">7.0/10</span>
+                <h3 class="feed-title">Дюна. Частина 2</h3>
+                <p class="feed-text">"Книга краща. Ви читали 6 томів Герберта?"</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Nerd" alt="ava" class="author-avatar">
+                  <span>@book_worm_iq200</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Картка 4 -->
-          <div class="feed-card" style="background-image: url('/pic/Code-geass_cover.jpg');">
-            <div class="feed-card-overlay">
-              <span class="rating">11/10</span>
-              <h3 class="feed-title">Code Geass</h3>
-              <p class="feed-text">"Лелуш був правий. Цей світ прогнив. Ніхто мене не розуміє так, як це аніме."</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Еджевий Саске / Аніме око -->
-                <img src="https://i.pinimg.com/736x/32/38/54/323854972ffb8bbd2011b9319fcb069d.jpg" alt="ava" class="author-avatar">
-                <span>@shadow_demon_08</span>
-              </a>
+            <div class="feed-card" style="background-image: url('/pic/Code-geass_cover.jpg');">
+              <div class="feed-card-overlay">
+                <span class="rating">11/10</span>
+                <h3 class="feed-title">Code Geass</h3>
+                <p class="feed-text">"Лелуш був правий. Цей світ прогнив."</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Shadow" alt="ava" class="author-avatar">
+                  <span>@shadow_demon_08</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Картка 5 -->
-          <div class="feed-card" style="background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png');">
-            <div class="feed-card-overlay">
-              <span class="rating">10/10</span>
-              <h3 class="feed-title">Відьмак 3</h3>
-              <p class="feed-text">"Замість того, щоб знайти дівчину, я пройшов її на 100% тричі. Ні про що не шкодую."</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Гігачад мем -->
-                <img src="https://i.pinimg.com/736x/c5/f5/63/c5f563d7e5d263a2a67e584fcdcfd483.jpg" alt="ava" class="author-avatar">
-                <span>@sigma_witcher</span>
-              </a>
+            <!-- ПЕРЕВЕДЕНО НА ЛОКАЛЬНІ ФАЙЛИ -->
+            <div class="feed-card" style="background-image: url('/pic/Witcher.jpg');">
+              <div class="feed-card-overlay">
+                <span class="rating">10/10</span>
+                <h3 class="feed-title">Відьмак 3</h3>
+                <p class="feed-text">"Пройшов її на 100% тричі. Ні про що не шкодую."</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Sigma" alt="ava" class="author-avatar">
+                  <span>@sigma_witcher</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Картка 6 -->
-          <div class="feed-card" style="background-image: url('https://image.tmdb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg');">
-            <div class="feed-card-overlay">
-              <span class="rating">9.9/10</span>
-              <h3 class="feed-title">Breaking Bad</h3>
-              <p class="feed-text">"Я почав варити мило на кухні, бо Уолтер Уайт - мій кумир."</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Кіт Уолтер Уайт -->
-                <img src="https://i.pinimg.com/736x/55/94/d8/5594d8058a5e9cd9f70d5530df32cfcc.jpg" alt="ava" class="author-avatar">
-                <span>@danger_is_me</span>
-              </a>
+            <div class="feed-card" style="background-image: url('/pic/BreakingBad.jpg');">
+              <div class="feed-card-overlay">
+                <span class="rating">9.9/10</span>
+                <h3 class="feed-title">Breaking Bad</h3>
+                <p class="feed-text">"Почав варити мило на кухні, бо Уолтер - мій кумир."</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/fun-emoji/svg?seed=Danger" alt="ava" class="author-avatar">
+                  <span>@danger_is_me</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Картка 7 (НОВА) -->
-          <div class="feed-card" style="background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png');">
-            <div class="feed-card-overlay">
-              <span class="rating">10/10</span>
-              <h3 class="feed-title">Elden Ring</h3>
-              <p class="feed-text">"Вбив першого боса через 40 годин. Дуже розслабляюча гра після роботи."</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Собака в вогні (This is fine) -->
-                <img src="https://i.pinimg.com/736x/1a/df/cc/1adfccfa5b072895bcad0a4bb2fc3d58.jpg" alt="ava" class="author-avatar">
-                <span>@git_gud_bro</span>
-              </a>
+            <div class="feed-card" style="background-image: url('/pic/Evangelion.jpg');">
+              <div class="feed-card-overlay">
+                <span class="rating">??/10</span>
+                <h3 class="feed-title">Evangelion</h3>
+                <p class="feed-text">"Я нічого не зрозумів в кінці, але плакав 3 дні. Сіндзі, лізь у робота!"</p>
+                <a href="expert.html" class="author">
+                  <img src="https://api.dicebear.com/9.x/fun-emoji/svg?seed=Cry" alt="ava" class="author-avatar">
+                  <span>@depressed_weeb</span>
+                </a>
+              </div>
             </div>
+
           </div>
 
-          <!-- Картка 8 (НОВА) -->
-          <div class="feed-card" style="background-image: url('https://image.tmdb.org/t/p/original/m9PtEA0ZNMlHHTyS0Xm1XNhhxGz.jpg');">
-            <div class="feed-card-overlay">
-              <span class="rating">??/10</span>
-              <h3 class="feed-title">Evangelion</h3>
-              <p class="feed-text">"Я нічого не зрозумів в кінці, але плакав 3 дні. Сіндзі, лізь у йобаного робота!"</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Сумний кіт -->
-                <img src="https://i.pinimg.com/736x/1d/15/88/1d158866e4a2fb11d4d8fc3bc3964893.jpg" alt="ava" class="author-avatar">
-                <span>@depressed_weeb</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Картка 9 (НОВА) -->
-          <div class="feed-card" style="background-image: url('https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg');">
-            <div class="feed-card-overlay">
-              <span class="rating">10/10</span>
-              <h3 class="feed-title">Бійцівський клуб</h3>
-              <p class="feed-text">"Цей фільм — буквально я. (Пишу це з маминої кімнати)."</p>
-              <a href="profile.html" class="author">
-                <!-- Ава: Патрік Бейтман / Райан Гослінг -->
-                <img src="https://i.pinimg.com/736x/88/4e/d8/884ed8d1d86d52fdf3d15b2e53fae3de.jpg" alt="ava" class="author-avatar">
-                <span>@literally_me</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- КНОПКА ЗАВАНТАЖИТИ ЩЕ (Стрілочка) -->
-          <div class="load-more-card">
-            <a href="#" class="load-more-btn">
-              <span class="arrow">→</span>
-              <span class="load-text">Завантажити ще</span>
-            </a>
-          </div>
-
+          <!-- Кнопка Вправо -->
+          <button class="scroll-arrow right" onclick="document.getElementById('dopamine-scroll').scrollBy({ left: 350, behavior: 'smooth' });">&#8594;</button>
         </div>
       </section>
 
-      <!-- РОЗДІЛИ (КАТЕГОРІЇ) -->
-      <section class="categories-section">
+      <section id="categories" class="categories-section">
         <div class="sct-line-box">
           <div class="sct-line"></div>
           <h2 class="section-title">Що досліджуємо сьогодні?</h2>
           <div class="sct-line"></div>
         </div>
 
+        <!-- КАТЕГОРІЇ ТЕЖ ПОВЕРНУВ НА ЛОКАЛЬНІ ФАЙЛИ ДЛЯ НАДІЙНОСТІ -->
         <div class="category-grid">
           <div class="cat-card">
             <img src="/pic/OldCamera.png" alt="Фільми">
-            <h3>Фільми & Серіали</h3>
+            <h3>Кіно & Серіали</h3>
           </div>
           <div class="cat-card">
             <img src="/pic/Videogame.png" alt="Ігри">
@@ -220,6 +173,15 @@
           <div class="cat-card">
             <img src="/pic/boardgames.jpg" alt="Настілки">
             <h3>Настільні ігри</h3>
+          </div>
+          <div class="cat-card">
+            <img src="/pic/AnimeCat.jpg" alt="Аніме">
+            <h3>Аніме & Манга</h3>
+          </div>
+          <div class="cat-card">
+            <img src="/pic/MusicCat.jpg" alt="Музика">
+            <h3>Музика</h3>
+            <p class="cat-subtext">Альбоми, EP, Сингли</p>
           </div>
         </div>
       </section>

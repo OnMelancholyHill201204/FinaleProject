@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <title>Мій Профіль | CultLog</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html"><h1 class="logo">CultLog.</h1></a>
+      </div>
+      <div class="header-center">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html#feed" class="nav-link">Стрічка</a></li>
+            <li><a href="index.html#categories" class="nav-link">Каталог</a></li>
+            <li><a href="#" class="nav-link active">Мої списки</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="header-buttons">
+          
+          <!-- КОНТЕЙНЕР НАЛАШТУВАНЬ З ВИПАДАЮЧИМ МЕНЮ ІМПОРТУ -->
+          <div class="settings-container">
+            <a href="#" class="btn-outline">⚙️ Налаштування</a>
+            
+            <!-- Випадаюче меню (з'являється при наведенні) -->
+            <div class="settings-dropdown">
+              <span class="dropdown-title">Синхронізація:</span>
+              <a href="#" class="import-link">🟢 Spotify</a>
+              <a href="#" class="import-link">🟦 Steam</a>
+              <a href="#" class="import-link">🟧 Letterboxd</a>
+              <a href="#" class="import-link">📘 MyAnimeList</a>
+              <a href="#" class="import-link">📚 Goodreads</a>
+              <a href="#" class="import-link">🎲 BGG (Настілки)</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <section class="profile-header">
+      <div class="profile-cover"></div>
+      <div class="profile-info">
+        <img src="https://api.dicebear.com/9.x/pixel-art/svg?seed=Egor" alt="Аватар" class="profile-main-avatar">
+        
+        <h2 class="profile-name">Єгор Лейс</h2>
+        <p class="profile-status">💎 Високий Критик <span>|</span> В мережі</p>
+
+        <div class="profile-music">
+          <!-- Музична аватарка -->
+          <img src="/pic/Evolve.jpg" alt="Imagine Dragons" class="music-cover">
+          <div class="music-info">
+            <span class="music-title">Believer</span>
+            <span class="music-artist">Imagine Dragons</span>
+          </div>
+          <span class="music-icon">🎵</span>
+        </div>
+
+        <p class="profile-bio">Не дивлюсь мейнстрім. Шукаю глибокі сенси там, де їх немає. Minecraft PvP enjoyer на сервері Дексланд.</p>
+        
+        <!-- БЛОК ХОБІ -->
+        <div class="profile-hobbies">
+          <span class="hobby-tag">Колекціонування 📦</span>
+          <span class="hobby-tag">Кіноаналітика 🎬</span>
+          <span class="add-hobby-btn">+ Додати хобі</span>
+        </div>
+
+        <!-- РОЗШИРЕНА СТАТИСТИКА -->
+        <div class="profile-stats">
+          <div class="stat-box">
+            <span class="stat-num">342</span>
+            <span class="stat-label">Фільми</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">87</span>
+            <span class="stat-label">Ігри</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">45</span>
+            <span class="stat-label">Альбоми</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">56</span>
+            <span class="stat-label">Книг прочитано</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">14</span>
+            <span class="stat-label">Настілок зібрано</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="profile-main">
+      <h3 class="section-title" style="text-align: left; margin-bottom: 20px;">Мої фаворити (10/10)</h3>
+      <div class="category-grid" style="justify-content: flex-start; margin-bottom: 60px;">
+        
+        <!-- УНІКАЛЬНІ ФАВОРИТИ -->
+        <div class="cat-card fav-card">
+          <img src="/pic/DeathNote.jpg" alt="Death Note">
+          <h3>Зошит Смерті</h3>
+          <p>Аніме</p>
+        </div>
+        <div class="cat-card fav-card">
+          <img src="/pic/Minecraft.jpg" alt="Minecraft">
+          <h3>Minecraft</h3>
+          <p>Відеогра</p>
+        </div>
+        <div class="cat-card fav-card">
+          <img src="/pic/HarryPotter.jpg" alt="Harry Potter">
+          <h3>Гарри Поттер</h3>
+          <p>Кінофраншиза</p>
+        </div>
+        <div class="cat-card fav-card">
+          <img src="/pic/Matrix.jpg" alt="Matrix">
+          <h3>Матриця</h3>
+          <p>Кіно</p>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="text-align: left; margin-bottom: 20px;">Останні оцінки</h3>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="act-rating">9/10</div>
+          <div class="act-info">
+            <h4>Прочитав: "Дюна. Месія"</h4>
+            <p>Герберт геній. Друга книга відкриває очі на фінал першої.</p>
+          </div>
+          <span class="act-date">Сьогодні</span>
+        </div>
+        
+        <div class="activity-item">
+          <div class="act-rating">10/10</div>
+          <div class="act-info">
+            <h4>Пограв: "Minecraft (PvP режим)"</h4>
+            <p>Розносив усіх на Дексланді. Нові бінди на мишку працюють ідеально.</p>
+          </div>
+          <span class="act-date">Вчора</span>
+        </div>
+
+        <div class="activity-item">
+          <div class="act-rating" style="background-color: #555;">У процесі</div>
+          <div class="act-info">
+            <h4>Дивлюсь: "Arcane (2 сезон)"</h4>
+            <p>Візуал просто неймовірний.</p>
+          </div>
+          <span class="act-date">3 дні тому</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 CultLog. Твій Гік-Щоденник.</p>
+    </footer>
+  </div>
+</body>
+</html>
